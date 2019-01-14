@@ -8,9 +8,9 @@
 # #print(tree.xpath('//h1[@class="AC5d8 notranslate"]/text()'))
 import requests
 import os
-print('##########################')
-ch = input('Tracker[T] or Checker[C] => ')
-ig = input('Enter Your Ig Name => ')
+# print('##########################')
+# ch = input('Tracker[T] or Checker[C] => ')
+# ig = input('Enter Your Ig Name => ')
 def follow(ig):
 	ig_t = 'ig/'+ig+'.txt'
 	r = requests.get("https://www.instagram.com/"+ig+"/")
@@ -34,10 +34,14 @@ def follow(ig):
 	w.close()
 	os.remove(ig_t)
 
-
-if ch == "T":
-	while 0<1:
+def go(ch, ig):
+	if ch == "T":
+		while 0<1:
+			print('##########################')
+			follow(ig)
+			
+	elif ch == "C":
+		print('##########################')
 		follow(ig)
-elif ch == "C":
-	follow(ig)
+
 
